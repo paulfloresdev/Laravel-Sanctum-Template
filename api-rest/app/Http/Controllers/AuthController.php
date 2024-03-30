@@ -18,7 +18,7 @@ class AuthController extends Controller
             'lastname' => 'required|string|min:1|max:64',
             'email' => 'required|string|email|min:1|max:64',
             'password' => 'required|string|min:8',
-            'role_id' => 'required|numeric'
+            'role_id' => 'required|numeric'              
         ];
         $validator = Validator::make($request->input(), $rules);
         if ($validator->fails()) {
